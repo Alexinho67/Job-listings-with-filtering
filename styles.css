@@ -1,0 +1,172 @@
+/* Layout
+The designs were created to the following widths:
+
+Mobile: 375px
+Desktop: 1440px
+
+Colors
+    Primary
+        Desaturated Dark Cyan: hsl(180, 29%, 50%)
+    Neutral
+        Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+        Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+        Dark Grayish Cyan: hsl(180, 8%, 52%)
+        Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+Typography
+    Body Copy
+        Font size: 15px
+    Headings
+        Family: Spartan
+        Weights: 500, 700 */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root{
+    /* Colors */
+    /* Primary */
+        --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+    /* Neutral */
+        --LightGrayishCyanBckg: hsl(180, 52%, 96%);  /* (Background) */
+        --LightGrayishCyan: hsl(180, 31%, 95%);/* (Filter Tablets) */
+        --DarkGrayishCyan: hsl(180, 8%, 52%);
+        --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+}
+body{
+    background-color:var(--DesaturatedDarkCyan);
+    padding:0;
+    margin:0;
+    font-family: 'Spartan', sans-serif;
+    background-image: url(images/bg-header-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+}
+main{
+    width: 100%;
+    margin: 160px 0;
+    padding-top: 1px;
+    background-color: var(--LightGrayishCyanBckg);
+}
+.filter_container{    
+    /* visibility: hidden;   */
+    align-items: center;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    max-width: 1200px; 
+    min-height: 5rem;
+    border: 3px solid red;
+    margin-top: -2rem;
+    background-color: var(--LightGrayishCyanBckg);
+    box-shadow: 0px 10px 15px var(--DesaturatedDarkCyan);
+    border-radius:10px; 
+    padding: 1rem 1rem 0.5rem 1rem;
+    margin-bottom: 3rem;  
+}
+
+.filter_container{
+    justify-content: space-between;
+    /* background-color:yellowgreen; */
+    /* border:4px dotted orange; */
+}
+.tags_searched{
+    /* background-color:#bbb; */
+    min-width: 1px;
+    /* display:flex; */
+}
+
+.clear_field{
+    font-weight: 700;
+    flex-shrink: 2;
+    cursor: pointer;
+}
+
+.filter_bar .language{
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    border-radius: 5px;
+    background-color: #444;
+    margin-right: 0.5rem;
+    padding-right: 0;
+
+}
+ .remove_btn{
+    background-color: var(--DesaturatedDarkCyan) ;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    display:inline-block;
+    padding:1.15rem 15px;
+    /* display:inline-block; */
+}
+.remove_btn:hover{
+    background-color: #222;
+}
+
+
+.item{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    border-radius:10px;
+    /* background-color: #ddd; */
+    background-color: var(--LightGrayishCyanBckg);
+    border: 0px solid;
+    box-shadow: 0px 10px 15px var(--DesaturatedDarkCyan);
+    margin-bottom: 2rem;
+}
+.item > div{
+    border:1px dashed transparent;
+}
+
+.flex_container{
+    display:flex;
+    align-items: center;
+}
+.logo{
+    padding-left: 40px;
+    padding-right: 20px;
+}
+.job-description{
+    flex-grow: 1;
+}
+.tags{
+    text-align: right;
+}
+
+h1{
+    font-size:170%;
+    color:var(--VeryDarkGrayishCyan);
+    cursor: pointer;
+    /* color:var(--DesaturatedDarkCyan); */
+}
+
+h1:hover{
+    color: var(--DesaturatedDarkCyan); 
+}
+.reqs{
+    color:var(--DarkGrayishCyan);
+}
+.reqs span:not(:first-child):before {
+    content:"\2022  ";
+    font-weight: 500;
+}
+.role, .level, .language, .tool{
+    border-radius: 25px;
+    background-color: var(--LightGrayishCyan);
+    color: var(--DesaturatedDarkCyan);
+    font-weight: 700;
+    /* margin-left:10px; */
+    /* margin-right:10px; */
+    padding:1rem 0.5rem;
+    cursor: pointer;
+}
+.hide{
+    visibility: hidden;
+}
